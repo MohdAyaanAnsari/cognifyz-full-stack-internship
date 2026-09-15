@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission Complete</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <div class="container result-card">
+        <span class="status-badge">✓ Submitted</span>
+        <h1>Welcome, <%= name %>!</h1>
+
+        <div class="data-box">
+            <div class="data-row">
+                <span class="data-label">Name</span>
+                <span class="data-value"><%= name %></span>
+            </div>
+            <div class="data-row">
+                <span class="data-label">Email</span>
+                <span class="data-value"><%= email %></span>
+            </div>
+        </div>
+
+        <a href="/" class="btn" style="width: 100%;">Go Back</a>
+    </div>
+
+</body>
+</html>
