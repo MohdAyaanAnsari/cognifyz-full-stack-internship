@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+</head>
+
+<body style="font-family: Arial, sans-serif; background-color: #f2f2f2; margin: 0; padding: 40px;">
+
+    <div style="
+        max-width: 500px;
+        margin: auto;
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    ">
+
+        <h1 style="text-align: center; color: #333;">
+            User Registration
+        </h1>
+
+        <form
+            action="/register"
+            method="POST"
+            onsubmit="return validateForm()"
+        >
+
+            <!-- Name -->
+            <label style="display: block; margin-top: 15px;">
+                Full Name
+            </label>
+
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                oninput="this.style.borderColor = '#007bff'"
+                style="
+                    width: 100%;
+                    padding: 10px;
+                    margin-top: 5px;
+                    box-sizing: border-box;
+                    border: 1px solid #ccc;
+                    border-radius: 6px;
+                "
+            >
+
+            <!-- Email -->
+            <label style="display: block; margin-top: 15px;">
+                Email
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                style="
+                    width: 100%;
+                    padding: 10px;
+                    margin-top: 5px;
+                    box-sizing: border-box;
+                    border: 1px solid #ccc;
+                    border-radius: 6px;
+                "
+            >
+
+            <!-- Password -->
+            <label style="display: block; margin-top: 15px;">
+                Password
+            </label>
+
+            <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter password"
+                style="
+                    width: 100%;
+                    padding: 10px;
+                    margin-top: 5px;
+                    box-sizing: border-box;
+                    border: 1px solid #ccc;
+                    border-radius: 6px;
+                "
+            >
+
+            <!-- Age -->
+            <label style="display: block; margin-top: 15px;">
+                Age
+            </label>
+
+            <input
+                type="number"
+                id="age"
+                name="age"
+                min="18"
+                max="100"
+                placeholder="Enter your age"
+                style="
+                    width: 100%;
+                    padding: 10px;
+                    margin-top: 5px;
+                    box-sizing: border-box;
+                    border: 1px solid #ccc;
+                    border-radius: 6px;
+                "
+            >
+
+            <!-- Gender -->
+            <label style="display: block; margin-top: 15px;">
+                Gender
+            </label>
+
+            <select
+                id="gender"
+                name="gender"
+                style="
+                    width: 100%;
+                    padding: 10px;
+                    margin-top: 5px;
+                    border: 1px solid #ccc;
+                    border-radius: 6px;
+                "
+            >
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <!-- Skills -->
+            <label style="display: block; margin-top: 15px;">
+                Skills
+            </label>
+
+            <div style="margin-top: 8px;">
+                <label>
+                    <input type="checkbox" name="skills" value="HTML">
+                    HTML
+                </label>
+
+                <label style="margin-left: 10px;">
+                    <input type="checkbox" name="skills" value="CSS">
+                    CSS
+                </label>
+
+                <label style="margin-left: 10px;">
+                    <input type="checkbox" name="skills" value="JavaScript">
+                    JavaScript
+                </label>
+            </div>
+
+            <!-- Terms -->
+            <div style="margin-top: 20px;">
+                <label>
+                    <input
+                        type="checkbox"
+                        id="terms"
+                        name="terms"
+                    >
+                    I agree to the terms and conditions
+                </label>
+            </div>
+
+            <!-- Error -->
+            <p
+                id="error"
+                style="
+                    color: red;
+                    font-size: 14px;
+                    min-height: 20px;
+                "
+            ></p>
+
+            <!-- Submit -->
+            <button
+                type="submit"
+                onmouseover="this.style.backgroundColor='#0056b3'"
+                onmouseout="this.style.backgroundColor='#007bff'"
+                style="
+                    width: 100%;
+                    padding: 12px;
+                    margin-top: 10px;
+                    background-color: #007bff;
+                    color: white;
+                    border: none;
+                    border-radius: 6px;
+                    cursor: pointer;
+                    font-size: 16px;
+                "
+            >
+                Register
+            </button>
+
+        </form>
+
+    </div>
+
+    <!-- Inline JavaScript -->
+    <script>
+
+        function validateForm() {
+
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value;
+            const age = document.getElementById("age").value;
+            const gender = document.getElementById("gender").value;
+            const terms = document.getElementById("terms").checked;
+
+            const error = document.getElementById("error");
+
+            error.innerText = "";
+
+            if (name.length < 3) {
+                error.innerText = "Name must contain at least 3 characters.";
+                return false;
+            }
+
+            if (!email.includes("@")) {
+                error.innerText = "Please enter a valid email.";
+                return false;
+            }
+
+            if (password.length < 6) {
+                error.innerText = "Password must contain at least 6 characters.";
+                return false;
+            }
+
+            if (age < 18 || age > 100) {
+                error.innerText = "Age must be between 18 and 100.";
+                return false;
+            }
+
+            if (gender === "") {
+                error.innerText = "Please select your gender.";
+                return false;
+            }
+
+            if (!terms) {
+                error.innerText = "Please accept the terms and conditions.";
+                return false;
+            }
+
+            return true;
+        }
+
+    </script>
+
+</body>
+</html>
