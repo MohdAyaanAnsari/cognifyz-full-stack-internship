@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Ayaan | Interactive Developer Hub</title>
+
+    <meta
+        name="description"
+        content="Interactive developer portfolio demonstrating complex form validation, dynamic DOM manipulation and client-side routing."
+    >
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<nav class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top">
+
+    <div class="container">
+
+        <a
+            href="#home"
+            class="navbar-brand logo route-link"
+        >
+            <span>&lt;</span>AYAAN<span>/&gt;</span>
+        </a>
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+            class="collapse navbar-collapse"
+            id="mainNavbar"
+        >
+
+            <ul class="navbar-nav mx-auto">
+
+                <li class="nav-item">
+                    <a
+                        class="nav-link route-link"
+                        href="#home"
+                        data-route="home"
+                    >
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a
+                        class="nav-link route-link"
+                        href="#about"
+                        data-route="about"
+                    >
+                        About
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a
+                        class="nav-link route-link"
+                        href="#projects"
+                        data-route="projects"
+                    >
+                        Projects
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a
+                        class="nav-link route-link"
+                        href="#register"
+                        data-route="register"
+                    >
+                        Join
+                    </a>
+                </li>
+
+            </ul>
+
+            <a
+                href="#register"
+                class="btn btn-outline-light navbar-btn route-link"
+            >
+                Get Started
+                <i class="bi bi-arrow-up-right"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- =====================================================
+     SPA APPLICATION
+===================================================== -->
+
+<main id="app">
+
+    <!-- =================================================
+         HOME ROUTE
+    ================================================= -->
+
+    <section
+        id="home-page"
+        class="page active-page"
+        data-page="home"
+    >
+
+        <div class="hero-section">
+
+            <div class="hero-grid"></div>
+
+            <div class="container">
+
+                <div class="row align-items-center hero-row">
+
+                    <div class="col-lg-7">
+
+                        <div class="availability-badge">
+                            <span class="status-dot"></span>
+                            Interactive Developer Experience
+                        </div>
+
+                        <p class="hero-label">
+                            TASK 04 • JAVASCRIPT
+                        </p>
+
+                        <h1 class="hero-title">
+                            Build.
+                            <span class="gradient-text">
+                                Validate.
+                            </span>
+                            Interact.
+                        </h1>
+
+                        <p class="hero-description">
+
+                            This page demonstrates advanced JavaScript
+                            form validation, dynamic DOM manipulation
+                            and client-side routing without reloading
+                            the browser.
+
+                        </p>
+
+                        <div class="hero-buttons">
+
+                            <a
+                                href="#register"
+                                class="btn btn-primary custom-primary-btn route-link"
+                            >
+                                Try Interactive Form
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+
+                            <a
+                                href="#projects"
+                                class="btn btn-outline-light custom-outline-btn route-link"
+                            >
+                                Explore Projects
+                            </a>
+
+                        </div>
+
+                        <div class="feature-pills">
+
+                            <span>
+                                <i class="bi bi-check-circle"></i>
+                                Live validation
+                            </span>
+
+                            <span>
+                                <i class="bi bi-check-circle"></i>
+                                Dynamic DOM
+                            </span>
+
+                            <span>
+                                <i class="bi bi-check-circle"></i>
+                                SPA routing
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-lg-5">
+
+                        <div class="hero-code-card">
+
+                            <div class="code-header">
+
+                                <div class="code-dots">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+                                <small>validation.js</small>
+
+                            </div>
+
+                            <div class="code-body">
+
+                                <p>
+                                    <span class="purple">const</span>
+                                    password
+                                    <span class="blue">=</span>
+                                    <span class="green">
+                                        user.password
+                                    </span>
+                                </p>
+
+                                <p>
+                                    <span class="purple">if</span>
+                                    <span class="yellow">(</span>
+                                    password.length
+                                    <span class="blue">&lt;</span>
+                                    <span class="orange">8</span>
+                                    <span class="yellow">)</span>
+                                </p>
+
+                                <p class="indent">
+                                    showError
+                                    <span class="yellow">(</span>
+                                    <span class="green">
+                                        "Too weak"
+                                    </span>
+                                    <span class="yellow">)</span>
+                                </p>
+
+                                <p>
+                                    <span class="purple">else</span>
+                                </p>
+
+                                <p class="indent">
+                                    showSuccess
+                                    <span class="yellow">(</span>
+                                    <span class="green">
+                                        "Strong password"
+                                    </span>
+                                    <span class="yellow">)</span>
+                                </p>
+
+                            </div>
+
+                            <div class="code-status">
+                                <span class="status-dot"></span>
+                                Validation engine ready
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- FEATURES -->
+
+        <section class="section-padding">
+
+            <div class="container">
+
+                <div class="row g-4">
+
+                    <div class="col-md-4">
+
+                        <div class="feature-card">
+
+                            <div class="feature-icon">
+                                <i class="bi bi-shield-check"></i>
+                            </div>
+
+                            <h3>Smart Validation</h3>
+
+                            <p>
+                                Multiple validation rules check
+                                user input before submission.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-4">
+
+                        <div class="feature-card">
+
+                            <div class="feature-icon">
+                                <i class="bi bi-lightning-charge"></i>
+                            </div>
+
+                            <h3>Live Updates</h3>
+
+                            <p>
+                                The interface changes instantly
+                                based on user interaction.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-4">
+
+                        <div class="feature-card">
+
+                            <div class="feature-icon">
+                                <i class="bi bi-signpost-split"></i>
+                            </div>
+
+                            <h3>Client Routing</h3>
+
+                            <p>
+                                Navigate between application views
+                                without refreshing the page.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </section>
+
+
+    <!-- =================================================
+         ABOUT ROUTE
+    ================================================= -->
+
+    <section
+        id="about-page"
+        class="page"
+        data-page="about"
+    >
+
+        <div class="container section-padding">
+
+            <div class="row align-items-center g-5">
+
+                <div class="col-lg-6">
+
+                    <div class="section-label">
+                        ABOUT THIS PROJECT
+                    </div>
+
+                    <h2 class="section-title">
+                        JavaScript makes
+                        <span class="gradient-text">
+                            websites interactive.
+                        </span>
+                    </h2>
+
+                    <p class="section-text">
+                        HTML provides structure and CSS provides
+                        presentation, but JavaScript allows the
+                        webpage to respond to users.
+                    </p>
+
+                    <p class="section-text">
+                        In this task, JavaScript is responsible for
+                        validating form fields, changing elements
+                        dynamically and controlling navigation.
+                    </p>
+
+                </div>
+
+
+                <div class="col-lg-6">
+
+                    <div class="concept-card">
+
+                        <div class="concept-row">
+
+                            <div class="concept-icon">
+                                <i class="bi bi-input-cursor-text"></i>
+                            </div>
+
+                            <div>
+                                <h4>User Input</h4>
+                                <p>
+                                    User enters information into
+                                    the form.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="concept-arrow">
+                            <i class="bi bi-arrow-down"></i>
+                        </div>
+
+
+                        <div class="concept-row">
+
+                            <div class="concept-icon">
+                                <i class="bi bi-shield-check"></i>
+                            </div>
+
+                            <div>
+                                <h4>Validation</h4>
+                                <p>
+                                    JavaScript checks every rule.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="concept-arrow">
+                            <i class="bi bi-arrow-down"></i>
+                        </div>
+
+
+                        <div class="concept-row">
+
+                            <div class="concept-icon success-icon">
+                                <i class="bi bi-check-lg"></i>
+                            </div>
+
+                            <div>
+                                <h4>Dynamic Update</h4>
+                                <p>
+                                    DOM changes according to
+                                    the result.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         PROJECTS ROUTE
+    ================================================= -->
+
+    <section
+        id="projects-page"
+        class="page"
+        data-page="projects"
+    >
+
+        <div class="container section-padding">
+
+            <div class="section-heading">
+
+                <div class="section-label">
+                    DYNAMIC DOM
+                </div>
+
+                <h2 class="section-title">
+                    Interactive
+                    <span class="gradient-text">
+                        components.
+                    </span>
+                </h2>
+
+                <p class="section-text">
+                    These components are controlled by JavaScript
+                    and react to user actions.
+                </p>
+
+            </div>
+
+
+            <div class="row g-4">
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="interactive-card">
+
+                        <div class="interactive-icon">
+                            <i class="bi bi-eye"></i>
+                        </div>
+
+                        <h3>Password Visibility</h3>
+
+                        <p>
+                            Toggle the password field between
+                            hidden and visible states.
+                        </p>
+
+                        <button
+                            class="btn btn-outline-light demo-btn"
+                            id="demoPasswordBtn"
+                        >
+                            Try interaction
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="interactive-card">
+
+                        <div class="interactive-icon">
+                            <i class="bi bi-calculator"></i>
+                        </div>
+
+                        <h3>Character Counter</h3>
+
+                        <p>
+                            Text input dynamically updates its
+                            character count.
+                        </p>
+
+                        <div class="demo-counter">
+                            <input
+                                type="text"
+                                id="demoInput"
+                                class="form-control custom-input"
+                                placeholder="Type something..."
+                            >
+
+                            <span>
+                                Characters:
+                                <strong id="demoCount">0</strong>
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="interactive-card">
+
+                        <div class="interactive-icon">
+                            <i class="bi bi-palette"></i>
+                        </div>
+
+                        <h3>Dynamic Status</h3>
+
+                        <p id="dynamicMessage">
+                            Click the button to modify this DOM element.
+                        </p>
+
+                        <button
+                            class="btn btn-outline-light demo-btn"
+                            id="domDemoBtn"
+                        >
+                            Update DOM
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         REGISTER ROUTE
+    ================================================= -->
+
+    <section
+        id="register-page"
+        class="page"
+        data-page="register"
+    >
+
+        <div class="container section-padding">
+
+            <div class="form-page-header text-center">
+
+                <div class="section-label">
+                    INTERACTIVE FORM
+                </div>
+
+                <h2 class="section-title">
+                    Create your
+                    <span class="gradient-text">
+                        developer account.
+                    </span>
+                </h2>
+
+                <p class="section-text">
+                    Try the complete client-side validation system.
+                </p>
+
+            </div>
+
+
+            <div class="row justify-content-center">
+
+                <div class="col-xl-8">
+
+                    <div class="registration-card">
+
+                        <!-- SUCCESS MESSAGE -->
+
+                        <div
+                            id="formSuccess"
+                            class="success-panel d-none"
+                        >
+
+                            <div class="success-circle">
+                                <i class="bi bi-check-lg"></i>
+                            </div>
+
+                            <h3>Registration Successful!</h3>
+
+                            <p id="successText">
+                                Your account has been created.
+                            </p>
+
+                            <button
+                                id="resetFormBtn"
+                                class="btn btn-primary custom-primary-btn"
+                            >
+                                Create Another Account
+                            </button>
+
+                        </div>
+
+
+                        <!-- FORM -->
+
+                        <form
+                            id="registrationForm"
+                            novalidate
+                        >
+
+                            <div class="row g-4">
+
+                                <!-- NAME -->
+
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="fullName"
+                                        class="form-label"
+                                    >
+                                        Full Name
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="fullName"
+                                        class="form-control custom-input"
+                                        placeholder="Ayaan Ansari"
+                                        autocomplete="name"
+                                    >
+
+                                    <div
+                                        id="nameError"
+                                        class="validation-message"
+                                    ></div>
+
+                                </div>
+
+
+                                <!-- USERNAME -->
+
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="username"
+                                        class="form-label"
+                                    >
+                                        Username
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="username"
+                                        class="form-control custom-input"
+                                        placeholder="ayaan_dev"
+                                    >
+
+                                    <div
+                                        id="usernameError"
+                                        class="validation-message"
+                                    ></div>
+
+                                </div>
+
+
+                                <!-- EMAIL -->
+
+                                <div class="col-12">
+
+                                    <label
+                                        for="email"
+                                        class="form-label"
+                                    >
+                                        Email Address
+                                    </label>
+
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        class="form-control custom-input"
+                                        placeholder="you@example.com"
+                                        autocomplete="email"
+                                    >
+
+                                    <div
+                                        id="emailError"
+                                        class="validation-message"
+                                    ></div>
+
+                                </div>
+
+
+                                <!-- PASSWORD -->
+
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="password"
+                                        class="form-label"
+                                    >
+                                        Password
+                                    </label>
+
+                                    <div class="password-wrapper">
+
+                                        <input
+                                            type="password"
+                                            id="password"
+                                            class="form-control custom-input"
+                                            placeholder="Create a strong password"
+                                            autocomplete="new-password"
+                                        >
+
+                                        <button
+                                            type="button"
+                                            class="password-toggle"
+                                            data-target="password"
+                                        >
+                                            <i class="bi bi-eye"></i>
+                                        </button>
+
+                                    </div>
+
+
+                                    <!-- STRENGTH BAR -->
+
+                                    <div class="strength-container">
+
+                                        <div class="strength-bar">
+                                            <span
+                                                id="strengthFill"
+                                            ></span>
+                                        </div>
+
+                                        <div class="strength-info">
+
+                                            <span>
+                                                Password strength
+                                            </span>
+
+                                            <strong id="strengthText">
+                                                Too weak
+                                            </strong>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- PASSWORD REQUIREMENTS -->
+
+                                    <div class="password-rules">
+
+                                        <div
+                                            id="ruleLength"
+                                            class="rule"
+                                        >
+                                            <i class="bi bi-circle"></i>
+                                            At least 8 characters
+                                        </div>
+
+                                        <div
+                                            id="ruleUpper"
+                                            class="rule"
+                                        >
+                                            <i class="bi bi-circle"></i>
+                                            One uppercase letter
+                                        </div>
+
+                                        <div
+                                            id="ruleLower"
+                                            class="rule"
+                                        >
+                                            <i class="bi bi-circle"></i>
+                                            One lowercase letter
+                                        </div>
+
+                                        <div
+                                            id="ruleNumber"
+                                            class="rule"
+                                        >
+                                            <i class="bi bi-circle"></i>
+                                            One number
+                                        </div>
+
+                                        <div
+                                            id="ruleSpecial"
+                                            class="rule"
+                                        >
+                                            <i class="bi bi-circle"></i>
+                                            One special character
+                                        </div>
+
+                                    </div>
+
+                                    <div
+                                        id="passwordError"
+                                        class="validation-message"
+                                    ></div>
+
+                                </div>
+
+
+                                <!-- CONFIRM PASSWORD -->
+
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="confirmPassword"
+                                        class="form-label"
+                                    >
+                                        Confirm Password
+                                    </label>
+
+                                    <div class="password-wrapper">
+
+                                        <input
+                                            type="password"
+                                            id="confirmPassword"
+                                            class="form-control custom-input"
+                                            placeholder="Repeat your password"
+                                            autocomplete="new-password"
+                                        >
+
+                                        <button
+                                            type="button"
+                                            class="password-toggle"
+                                            data-target="confirmPassword"
+                                        >
+                                            <i class="bi bi-eye"></i>
+                                        </button>
+
+                                    </div>
+
+                                    <div
+                                        id="confirmError"
+                                        class="validation-message"
+                                    ></div>
+
+                                </div>
+
+
+                                <!-- BIO -->
+
+                                <div class="col-12">
+
+                                    <label
+                                        for="bio"
+                                        class="form-label"
+                                    >
+                                        Short Bio
+                                    </label>
+
+                                    <textarea
+                                        id="bio"
+                                        class="form-control custom-input"
+                                        rows="5"
+                                        maxlength="250"
+                                        placeholder="Tell us a little about yourself..."
+                                    ></textarea>
+
+                                    <div class="textarea-footer">
+
+                                        <div
+                                            id="bioError"
+                                            class="validation-message"
+                                        ></div>
+
+                                        <span>
+                                            <strong id="bioCount">0</strong>
+                                            / 250
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- TERMS -->
+
+                                <div class="col-12">
+
+                                    <div class="terms-box">
+
+                                        <input
+                                            type="checkbox"
+                                            id="terms"
+                                        >
+
+                                        <label for="terms">
+                                            I agree to the terms and
+                                            understand that this is a
+                                            client-side demonstration.
+                                        </label>
+
+                                    </div>
+
+                                    <div
+                                        id="termsError"
+                                        class="validation-message"
+                                    ></div>
+
+                                </div>
+
+
+                                <!-- SUBMIT -->
+
+                                <div class="col-12">
+
+                                    <button
+                                        type="submit"
+                                        class="btn btn-primary custom-primary-btn submit-btn"
+                                    >
+                                        Create Account
+                                        <i class="bi bi-arrow-right"></i>
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="row align-items-center g-4">
+
+            <div class="col-md-6">
+
+                <a
+                    href="#home"
+                    class="footer-logo route-link"
+                >
+                    <span>&lt;</span>AYAAN<span>/&gt;</span>
+                </a>
+
+                <p class="footer-text">
+                    Task 4 — JavaScript & Dynamic Web Experience
+                </p>
+
+            </div>
+
+            <div class="col-md-6 text-md-end">
+
+                <div class="footer-links">
+
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#register">Register</a>
+
+                </div>
+
+                <p class="copyright">
+                    © 2026 Ayaan. Built with HTML, CSS, Bootstrap & JavaScript.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- Bootstrap JS -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<!-- Custom JavaScript -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
