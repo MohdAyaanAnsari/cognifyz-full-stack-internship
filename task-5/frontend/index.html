@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>ShopEase | Products</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container navbar">
+
+      <a href="#" class="logo">
+        Shop<span>Ease</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+      </nav>
+
+      <div class="cart">
+        🛒 <span>Cart</span>
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-content">
+
+      <div>
+        <p class="hero-label">TASK 5 • API INTEGRATION</p>
+
+        <h1>
+          Discover Products
+          <span>You'll Love.</span>
+        </h1>
+
+        <p class="hero-description">
+          Products fetched dynamically from our RESTful API
+          and displayed using HTML, CSS and JavaScript.
+        </p>
+
+        <a href="#products" class="shop-btn">
+          Explore Products →
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Products Section -->
+  <main id="products" class="products-section">
+
+    <div class="container">
+
+      <div class="section-header">
+        <div>
+          <p class="section-label">OUR COLLECTION</p>
+          <h2>Latest Products</h2>
+        </div>
+
+        <p id="product-count" class="product-count">
+          Loading products...
+        </p>
+      </div>
+
+
+      <!-- Loading -->
+      <div id="loading" class="loading">
+        <div class="loader"></div>
+        <p>Fetching products from API...</p>
+      </div>
+
+
+      <!-- Error -->
+      <div id="error" class="error hidden">
+        <h3>Unable to load products</h3>
+        <p>
+          Please make sure the backend server is running.
+        </p>
+
+        <button onclick="fetchProducts()">
+          Try Again
+        </button>
+      </div>
+
+
+      <!-- Products -->
+      <div id="products-container" class="products-grid"></div>
+
+    </div>
+
+  </main>
+
+
+  <!-- About -->
+  <section id="about" class="about">
+    <div class="container about-content">
+
+      <p class="section-label">ABOUT THIS PROJECT</p>
+
+      <h2>REST API Integration</h2>
+
+      <p>
+        This e-commerce interface demonstrates server-client
+        communication using a RESTful API. Product information
+        is stored in a JSON file on the backend and fetched
+        dynamically using JavaScript.
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>
+        Task 5 — API Integration & Front-End Interaction
+      </p>
+    </div>
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>

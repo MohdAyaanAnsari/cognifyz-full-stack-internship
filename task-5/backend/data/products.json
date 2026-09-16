@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Headphones",
+    "description": "High-quality wireless headphones with comfortable ear cushions and clear sound.",
+    "price": 2499,
+    "category": "Electronics",
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 2,
+    "name": "Mechanical Keyboard",
+    "description": "RGB mechanical keyboard designed for developers, gamers, and creators.",
+    "price": 3499,
+    "category": "Electronics",
+    "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 3,
+    "name": "Smart Watch",
+    "description": "Modern smartwatch with fitness tracking and smart notifications.",
+    "price": 2999,
+    "category": "Wearables",
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 4,
+    "name": "Developer Hoodie",
+    "description": "Comfortable cotton hoodie perfect for everyday wear.",
+    "price": 1299,
+    "category": "Clothing",
+    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 5,
+    "name": "Gaming Mouse",
+    "description": "Ergonomic gaming mouse with precise tracking and customizable buttons.",
+    "price": 1599,
+    "category": "Accessories",
+    "image": "https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 6,
+    "name": "Laptop Backpack",
+    "description": "Durable backpack with dedicated laptop compartment and multiple storage sections.",
+    "price": 1899,
+    "category": "Accessories",
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80"
+  }
+]
