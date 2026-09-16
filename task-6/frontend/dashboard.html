@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Dashboard - Task 6</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <div class="dashboard">
+
+    <header>
+
+      <div>
+        <h1>Secure Dashboard</h1>
+        <p id="welcome"></p>
+      </div>
+
+      <button id="logoutBtn">
+        Logout
+      </button>
+
+    </header>
+
+    <section class="card">
+
+      <h2>Submit Form Data</h2>
+
+      <form id="dataForm">
+
+        <input
+          type="text"
+          id="title"
+          placeholder="Title"
+          required
+        >
+
+        <textarea
+          id="formMessage"
+          placeholder="Enter your message"
+          required
+        ></textarea>
+
+        <button type="submit">
+          Save Data
+        </button>
+
+      </form>
+
+      <p id="formStatus"></p>
+
+    </section>
+
+    <section class="card">
+
+      <h2>Your Saved Data</h2>
+
+      <div id="dataList">
+        Loading...
+      </div>
+
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
